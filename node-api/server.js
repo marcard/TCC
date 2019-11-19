@@ -11,9 +11,12 @@ mongoose.connect('mongodb://localhost:32769/nodeapi',
     useNewUrlParser: true,
     useUnifiedTopology: true 
 });
+
+require('./src/models/Product');
+
+
+
 //Rotas
-app.get('/', function(req,res){
-    res.send("Hello World");
-});
+ app.use('/api', require ("./src/routes"));
 
 app.listen(3001);

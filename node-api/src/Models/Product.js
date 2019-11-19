@@ -19,3 +19,5 @@ const ProductSchema =  new mongoose.Schema({
     }
 
 });
+
+mongoose.model('Product', ProductSchema);
