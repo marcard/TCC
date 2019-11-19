@@ -1,9 +1,7 @@
-const mongoose = require('mongoose');
-
-const Product = mongoose.model('Product');
+const Product = require('../src/Models/Product');
 
 module.exports = {
-    async indexe(req, res){
+    async index(req, res){
         const products = await Product.find();
 
         return res.json(products)

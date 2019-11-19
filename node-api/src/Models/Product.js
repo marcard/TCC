@@ -18,6 +18,6 @@ const ProductSchema =  new mongoose.Schema({
         default: Date.now(),
     }
 
-});
+}); 
 
-mongoose.model('Product', ProductSchema);
+module.exports = mongoose.model('Product', ProductSchema);

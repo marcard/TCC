@@ -6,17 +6,16 @@ const app = express();
 
 //iniciando DB
 
-mongoose.connect('mongodb://localhost:32769/nodeapi',
+mongoose.connect('mongodb+srv://marco:mongo123@tcc-pu7z2.mongodb.net/Productsst?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology: true 
 });
 
-require('./src/models/Product');
 
-
+const routes = require('./src/routes');
 
 //Rotas
- app.use('/api', require ("./src/routes"));
+app.use(routes);
 
 app.listen(3001);
